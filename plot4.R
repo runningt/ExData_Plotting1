@@ -1,4 +1,4 @@
-input = read.table('../household_power_consumption.txt', sep=';', stringsAsFactor=FALSE, na.strings='?')
+input = read.table('../household_power_consumption.txt', sep=';', stringsAsFactor=FALSE, na.strings='?', header=TRUE)
 library(dplyr)
 my_df = tbl_df(input)
 plot_days = filter(my_df,Date=='1/2/2007'|Date=='2/2/2007')
